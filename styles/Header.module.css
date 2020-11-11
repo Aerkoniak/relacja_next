@@ -1,0 +1,63 @@
+.logo {
+    width: 80%;
+}
+
+.logoDiv {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transition: .5s;
+    z-index: 10;
+}
+
+.logoDivHide {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transition: .5s;
+    transform: translateY(100%);
+    transition-delay: .7s;
+}
+
+.navShown {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 11;
+    transition: .3s;
+}
+.navHide {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 11;
+
+    transform: translateY(100%);
+    transition: .3s;
+}
