@@ -1,3 +1,14 @@
+.header {
+    margin: 0;
+    min-width: 100%;
+    min-height: 100vh;
+    background-image: url('../public/mobile-header.jpg');
+    background-size: cover;
+    background-position: 60% 0;
+    display: flex;
+    position: relative;
+}
+
 .logo {
     width: 80%;
 }
@@ -27,6 +38,8 @@
     transition: .5s;
     transform: translateY(100%);
     transition-delay: .7s;
+    z-index: 10;
+
 }
 
 .navShown {
@@ -36,13 +49,15 @@
     margin: 0;
     
     position: fixed;
-    width: 100%;
+    width: 100vw;
     height: 10vh;
     bottom: 0;
-    left: 0;
+    right: 0;
     background-color: #fff;
     z-index: 11;
-    transition: .3s;
+    transition: .5s;
+    transition-delay: .5s;
+
 }
 .navHide {
     display: flex;
@@ -51,13 +66,148 @@
     margin: 0;
     
     position: fixed;
-    width: 100%;
+    width: 100vw;
     height: 10vh;
     bottom: 0;
-    left: 0;
+    right: 0;
     background-color: #fff;
     z-index: 11;
 
     transform: translateY(100%);
     transition: .3s;
+}
+
+.link {
+    color: black;
+}
+
+.iconWrapBars {
+    display: flex;
+    position: fixed;
+    right: 3vh;
+    bottom: 11vh;
+    background-color: rgba(50,50,50, 0.3);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: 10;
+}
+.iconWrapPhone {
+    display: flex;
+    position: fixed;
+    right: 3vh;
+    bottom: 21vh;
+    background-color: rgba(50,50,50, 0.3);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: 10;
+    transition: 0.5s;
+}
+.iconWrapPhoneHide {
+    display: flex;
+    position: fixed;
+    right: 3vh;
+    bottom: 21vh;
+    background-color: rgba(50,50,50, 0.3);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: 10;
+    transform: translateX(150%);
+    transition: 0.5s;
+}
+
+.barsForMobile {
+    margin: auto;
+    font-size: 30px;
+    color: white;
+}
+
+
+.quote {
+    width: 100%;
+    margin: auto;
+    padding: 15px 20px;
+    background-color: rgba(50, 50, 50, .8);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+
+.quote h4 {
+    align-self: flex-end;
+    font-family: 'Italianno', cursive;
+    font-size: 40px;
+}
+
+@media screen and (min-width: 1024px) {
+    .header {
+        background-image: url('../public/desktop-header.jpg');
+        background-size: cover;
+        background-position: 60% 0;
+        background-attachment: fixed;
+    }
+    .logo {
+        width: 50%;
+        cursor: pointer;
+    }
+    .logoDiv, .logoDivHide {
+        width: 50%;
+        top: 0;
+        left: 0;
+        background-color: #000;
+        transform: translateY(0);
+    }
+    .navShown, .navHide {
+        position: fixed;
+        width: 50%;
+        top: 0;
+        right: 0;
+        background-color: #000;
+        transform: translateY(0);
+    }
+    .mobileHome {
+        display: none;
+    }
+
+    .link:nth-of-type(1) {
+        display: none;
+    }
+
+    .link {
+        display: block;
+        color: white;
+        font-size: 24px;
+        padding: 10px 15px;
+        border-bottom: 3px solid black;
+        transition: 0.2s;
+    }
+    .link:hover {
+        border-bottom: 3px solid white;
+        text-decoration: none;
+        color: white;
+    }
+
+    .barsForMobile {
+        display: none;
+    }
+
+    .quote {
+        width: 100%;
+        background-color: rgba(50, 50, 50, .5);
+    }
+    .quote p {
+        font-size: 20px;
+        align-self: center;
+    }
+    .quote h4 {
+        align-self: center;
+        transform: translateX(100%);
+    }
+
+    .iconWrapPhone, .iconWrapPhoneHide, .iconWrapBars {
+        display: none;
+    }
 }
