@@ -18,11 +18,12 @@ const Nav = ({ className, drawQuote }) => {
 
     return (
         <ul onClick={drawQuote} className={isNavHide ? styles.navHide : styles.navShown} >
-            <Link scroll={false} href="/"><a className={styles.link}><FontAwesomeIcon icon={faHome} /></a></Link>
-            <Link scroll={false} href="/o-mnie#o-mnie"><a className={styles.link}>O mnie</a></Link>
-            <Link scroll={false} href="/o-terapiach"><a className={styles.link}>O terapii</a></Link>
+            <Link scroll={false} href="/#start"><a className={styles.link}><FontAwesomeIcon icon={faHome} /></a></Link>
+            <Link scroll href="/o-mnie#o-mnie"><a className={styles.link}>O mnie</a></Link>
+            <Link scroll href="/o-terapiach#o-terapiach"><a className={styles.link}>O terapii</a></Link>
             <Link scroll={false} href="/cennik"><a className={styles.link}>Cennik</a></Link>
-            <Link scroll={false} href="/kontakt"><a className={styles.link}>Kontakt</a></Link>
+            <Link href="/#kontakt"><a className={styles.mobileContact}>Kontakt</a></Link>
+            <Link scroll={false} href="/kontakt"><a className={styles.desktopContact}>Kontakt</a></Link>
         </ul>
     );
 }
