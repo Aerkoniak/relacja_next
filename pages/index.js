@@ -6,7 +6,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 export default function Home() {
   return (
-    <section className={styles.main}>
+    <section className={styles.main} id="start">
       <Head>
         <title>Gabinet Re-Lacja</title>
         <link rel="icon" href="/favicon.ico" />
@@ -46,7 +46,7 @@ export default function Home() {
         </Row>
         <img className={styles.line} src="/straight.png" alt="" />
         <Row className={styles.secondRow}>
-          <Col md={{ span: 4, offset: 5 }}>
+          <Col md={{ span: 4, offset: 5 }} id="kontakt">
             <p className={styles.landing}>Pracownia Psychoterapii <strong>RE-LACJA</strong></p>
             <p className={styles.landing}>Sandra Łuczak-Grabowska</p>
             <p className={styles.landing}>Ul. Piwna 5 (II piętro)</p>
