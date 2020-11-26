@@ -1,4 +1,4 @@
-# Demo: https://re-lacja.pl 
+# Demo: https://relacja.herokuapp.com/
 
 
 The project "Re-lation" is my first commercial project. A businnes website created for a small psychotherapeutic office.
